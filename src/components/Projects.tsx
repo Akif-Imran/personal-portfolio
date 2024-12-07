@@ -4,22 +4,25 @@ import { Lucide } from "./icons";
 // TODO : update projects
 const projects = [
   {
-    title: "astrolinkt",
-    description: "Astro template",
-    icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrolinkt",
+    title: "AYI TECHFE",
+    description: "Toronto, Canada",
+    icon: Lucide.AYIIcon,
+    viewBox: "0 0 95 48",
+    url: "https://www.ayiservices.com",
   },
   {
-    title: "astrovehnt",
-    description: "Astro template",
+    title: "OurMaids Inc.",
+    description: "Delaware, U.S.A",
     icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrovehnt",
+    viewBox: "0 0 24 24",
+    url: "https://www.ourmaids.com",
   },
   {
-    title: "astrobuckt",
-    description: "Astro template",
+    title: "eBasel Waste Shipments",
+    description: "Kuala Lumpur, Malaysia",
     icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrobuckt",
+    viewBox: "0 0 24 24",
+    url: "http://ebasel-web-1023016788.ap-southeast-1.elb.amazonaws.com/",
   },
 ];
 
@@ -45,13 +48,16 @@ export default () => {
                 <div className="flex flex-row items-stretch gap-5 pl-2">
                   <div className="flex items-center justify-center">
                     <project.icon
-                      size={24}
+                      size={48}
+                      viewBox={project.viewBox}
                       className="transition duration-300 group-hover:-translate-y-1 text-neutral-10 group-hover:text-neutral-11"
                     />
                   </div>
 
                   <div>
-                    <h3 className="transition duration-300 group-hover:translate-x-1 text-neutral-12 text-sm">{project.title}</h3>
+                    <h3 className="transition duration-300 group-hover:translate-x-1 text-neutral-12 text-sm">
+                      {project.title}
+                    </h3>
                     <div className="transition duration-300 group-hover:translate-x-px text-neutral-10 group-hover:text-neutral-11 text-xs">
                       {project.description}
                     </div>
