@@ -45,7 +45,7 @@ const Globe = () => {
       dark: 1,
       diffuse: 3,
       mapSamples: 16000,
-      mapBrightness: 10,
+      mapBrightness: 2,
       baseColor: color(getPropertyValueFrom(style, "--neutral-9")),
       markerColor: color(getPropertyValueFrom(style, "--primary-9")),
       glowColor: color(getPropertyValueFrom(style, "--neutral-11")),

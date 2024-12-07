@@ -13,8 +13,8 @@ const projects = [
   {
     title: "OurMaids Inc.",
     description: "Delaware, U.S.A",
-    icon: Lucide.IconImage,
-    viewBox: "0 0 24 24",
+    icon: Lucide.OurMaidsIcon,
+    viewBox: "0 0 100 100",
     url: "https://www.ourmaids.com",
   },
   {
