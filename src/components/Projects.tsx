@@ -7,7 +7,7 @@ const projects = [
     title: "AYI TECHFE",
     description: "Toronto, Canada",
     icon: Lucide.AYIIcon,
-    viewBox: "0 0 95 48",
+    viewBox: "-1 0 95 48",
     url: "https://www.ayiservices.com",
   },
   {
@@ -20,8 +20,8 @@ const projects = [
   {
     title: "eBasel Waste Shipments",
     description: "Kuala Lumpur, Malaysia",
-    icon: Lucide.IconImage,
-    viewBox: "0 0 24 24",
+    icon: Lucide.eBaselIcon,
+    viewBox: "-10 0 360 260.7",
     url: "http://ebasel-web-1023016788.ap-southeast-1.elb.amazonaws.com/",
   },
 ];
