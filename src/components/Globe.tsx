@@ -11,7 +11,8 @@ const color = (() => {
     return n / 255;
   };
 
-  return <T extends [string, string, string]>(t: T) => [convert(t[0]), convert(t[1]), convert(t[2])] as [number, number, number];
+  return <T extends [string, string, string]>(t: T) =>
+    [convert(t[0]), convert(t[1]), convert(t[2])] as [number, number, number];
 })();
 
 const getPropertyValueFrom = (style: CSSStyleDeclaration, varName: string) =>
@@ -21,7 +22,10 @@ const Globe = () => {
   const ref = useRef<HTMLCanvasElement | null>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef<number>(0);
-  const [{ r }, api] = useSpring(() => ({ r: 0, config: { mass: 1, tension: 280, friction: 40, precision: 0.001 } }));
+  const [{ r }, api] = useSpring(() => ({
+    r: 0,
+    config: { mass: 1, tension: 280, friction: 40, precision: 0.001 },
+  }));
 
   useEffect(() => {
     let phi = 0;
@@ -41,14 +45,15 @@ const Globe = () => {
       dark: 1,
       diffuse: 3,
       mapSamples: 16000,
-      mapBrightness: 2,
+      mapBrightness: 10,
       baseColor: color(getPropertyValueFrom(style, "--neutral-9")),
       markerColor: color(getPropertyValueFrom(style, "--primary-9")),
       glowColor: color(getPropertyValueFrom(style, "--neutral-11")),
       markers: [
         {
           // TODO : update location. https://cobe.vercel.app/docs/api#markers
-          location: [-7.5360639, 112.2384017],
+          // location: [-7.5360639, 112.2384017],
+          location: [33.6007, 73.0679],
           size: 0.1,
         },
       ],
@@ -98,7 +103,12 @@ const Globe = () => {
             }
           }}
           className="w-full h-full"
-          style={{ cursor: "grab", contain: "layout paint size", opacity: 0, transition: "opacity 1s ease" }}
+          style={{
+            cursor: "grab",
+            contain: "layout paint size",
+            opacity: 0,
+            transition: "opacity 1s ease",
+          }}
         />
       </div>
     </div>

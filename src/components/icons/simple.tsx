@@ -1,26 +1,32 @@
 import { forwardRef } from "react";
 import type { SVGProps } from "react";
 
-type BaseProps = Omit<SVGProps<SVGSVGElement>, "role" | "viewBox" | "xmlns" | "children"> & { d: string; size?: number };
+type BaseProps = Omit<SVGProps<SVGSVGElement>, "role" | "viewBox" | "xmlns" | "children"> & {
+  d: string;
+  size?: number;
+};
 
-const Base = forwardRef<SVGSVGElement, BaseProps>(({ d, size = 16, width = size, height = size, ...props }, ref) => (
-  <svg
-    ref={ref}
-    fill="currentColor"
-    {...props}
-    width={width}
-    height={height}
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d={d} />
-  </svg>
-));
+const Base = forwardRef<SVGSVGElement, BaseProps>(
+  ({ d, size = 16, width = size, height = size, ...props }, ref) => (
+    <svg
+      ref={ref}
+      fill="currentColor"
+      {...props}
+      width={width}
+      height={height}
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d={d} />
+    </svg>
+  )
+);
 
 type IconProps = Omit<BaseProps, "d">;
 
-const create = (d: string) => forwardRef<SVGSVGElement, IconProps>((props, ref) => <Base ref={ref} d={d} {...props} />);
+const create = (d: string) =>
+  forwardRef<SVGSVGElement, IconProps>((props, ref) => <Base ref={ref} d={d} {...props} />);
 
 /**
  * How to add icons ?

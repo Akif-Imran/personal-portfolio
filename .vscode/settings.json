@@ -3,5 +3,8 @@
   "javascript.preferences.importModuleSpecifierEnding": "js",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "js",
-  "tailwindCSS.experimental.classRegex": [["(?:(?:re)?klass(?:ed)?|group)(?:\\.\\w*)?\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]]
+  "tailwindCSS.experimental.classRegex": [
+    ["(?:(?:re)?klass(?:ed)?|group)(?:\\.\\w*)?\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "cSpell.words": ["klassed", "mklassed", "reklass", "reklassed"]
 }

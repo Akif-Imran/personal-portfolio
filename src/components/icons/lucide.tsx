@@ -3,22 +3,24 @@ import type { ReactNode, SVGProps } from "react";
 
 type BaseProps = Omit<SVGProps<SVGSVGElement>, "role" | "viewBox" | "xmlns"> & { size?: number };
 
-const Base = forwardRef<SVGSVGElement, BaseProps>(({ d, size = 16, width = size, height = size, ...props }, ref) => (
-  <svg
-    ref={ref}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-    width={width}
-    height={height}
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  />
-));
+const Base = forwardRef<SVGSVGElement, BaseProps>(
+  ({ d, size = 16, width = size, height = size, ...props }, ref) => (
+    <svg
+      ref={ref}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+      width={width}
+      height={height}
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  )
+);
 
 type IconProps = Omit<BaseProps, "children">;
 
